@@ -1,0 +1,417 @@
+<style>
+/* .dropdown:hover>.dropdown-menu { */
+/*  display: block; */
+/* } */
+.dropdown-menu {
+	margin: 0 0 0 0;
+}
+
+.otn {
+	display: inline-block;
+	font-weight: 400;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.35rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+</style>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+	<li class="nav-item" role="presentation">
+		<button class="nav-link active" id="home-tab" data-toggle="tab"
+			data-target="#all" type="button" role="tab" aria-controls="all"
+			aria-selected="true">Tất cả</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="profile-tab" data-toggle="tab"
+			data-target="#my" type="button" role="tab" aria-controls="my"
+			aria-selected="false">Dự án của tôi</button>
+	</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="all" role="tabpanel"
+		aria-labelledby="all-tab">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3">
+				<h6 class="m-0 font-weight-bold text-primary">Tất cả dự án</h6>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<!-- Topbar Search -->
+					<form class="d-none d-sm-inline-block form-inline navbar-search">
+						<div class="input-group">
+							<input type="text" class="form-control bg-light border-0 small"
+								placeholder="Tìm kiếm dự án..." aria-label="Search"
+								aria-describedby="basic-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-primary" type="button">
+									<i class="fas fa-search fa-sm"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<select class="otn border">
+						<option hidden>Chọn level</option>
+						<option value="1">Dự án thực tế</option>
+						<option value="2">Luyện tập kỹ năng</option>
+						<option value="3">Thực hành môn học</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn chuyên ngành</option>
+						<option value="1">Lập trình máy tính</option>
+						<option value="2">Thiết kế đồ hoạ</option>
+						<option value="3">Ứng dụng phần mềm</option>
+						<option value="3">Thiết kế website</option>
+						<option value="3">Thiết kế đồ hoạ</option>
+						<option value="3">Lập trình web</option>
+						<option value="3">Lập trình mobile</option>
+						<option value="3">Phát triển phần mềm</option>
+						<option value="3">Xử lý dữ liệu</option>
+						<option value="3">Tiếng anh</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn giảng viên</option>
+						<option value="1">NVA</option>
+						<option value="2">NVB</option>
+						<option value="3">NVC</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn tình trạng</option>
+						<option value="1">Đang triển khai</option>
+						<option value="2">Đã kết thúc</option>
+						<option value="3">Three</option>
+					</select> <a class="btn btn-light btn-icon-split" href="#!projectCreate">
+						<span class="icon text-gray-600"> <i
+							class="fa fa-plus-circle" aria-hidden="true"></i>
+					</span> <span class="text">Tạo dự án</span>
+					</a>
+					<table class="table table-striped mt-4" id="dataTable" width="100%"
+						cellspacing="0">
+						<thead>
+							<tr>
+								<th>STT</th>
+								<th>DỰ ÁN</th>
+								<th>TÊN XƯỞNG</th>
+								<th>GV HƯỚNG DẪN</th>
+								<th>HỌC KỲ</th>
+								<th>THÀNH VIÊN</th>
+								<th>TRẠNG THÁI</th>
+								<th>DEADLINE</th>
+								<th>TÙY CHỌN</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>
+									<div class="text-dark">Dự án kiểm tra UI và function góc
+										nhìn của Sinh viên</div>
+								</td>
+								<td>Lập trình mobile</td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn" type="button" id="dropdownMenuButton"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										</button>
+										Thêm giảng viên
+									</div>
+								</td>
+								<td>SPRING 2023</td>
+								<td>8</td>
+								<td><span class="badge badge-pill badge-info">Đang
+										triển khai</span></td>
+								<td><p>07:00:00 12/3/2023</p></td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn btn-circle btn-light" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-fw fa-ellipsis-v"></i>
+										</button>
+										<div class="dropdown-menu animated--fade-in"
+											aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#!projectEdit">Chỉnh sửa</a> <a
+												class="dropdown-item" href="#">Lưu</a> <a
+												class="dropdown-item" href="#">Xét duyệt</a> <a
+												class="dropdown-item" href="#">Xóa</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>
+									<div class="text-dark">Dự án kiểm tra UI và function góc
+										nhìn của Sinh viên</div>
+								</td>
+								<td>Lập trình mobile</td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn" type="button" id="dropdownMenuButton"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										</button>
+										Thêm giảng viên
+									</div>
+								</td>
+								<td>SPRING 2023</td>
+								<td>8</td>
+								<td><span class="badge badge-pill badge-info">Đang
+										triển khai</span></td>
+								<td><p>07:00:00 12/3/2023</p></td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn btn-circle btn-light" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-fw fa-ellipsis-v"></i>
+										</button>
+										<div class="dropdown-menu animated--fade-in"
+											aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#!projectEdit">Chỉnh sửa</a> <a
+												class="dropdown-item" href="#">Lưu</a> <a
+												class="dropdown-item" href="#">Xét duyệt</a> <a
+												class="dropdown-item" href="#">Xóa</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>
+									<div class="text-dark">Dự án kiểm tra UI và function góc
+										nhìn của Sinh viên</div>
+								</td>
+								<td>Lập trình mobile</td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn" type="button" id="dropdownMenuButton"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										</button>
+										Thêm giảng viên
+									</div>
+								</td>
+								<td>SPRING 2023</td>
+								<td>8</td>
+								<td><span class="badge badge-pill badge-info">Đang
+										triển khai</span></td>
+								<td><p>07:00:00 12/3/2023</p></td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn btn-circle btn-light" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-fw fa-ellipsis-v"></i>
+										</button>
+										<div class="dropdown-menu animated--fade-in"
+											aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#!projectEdit">Chỉnh sửa</a> <a
+												class="dropdown-item" href="#">Lưu</a> <a
+												class="dropdown-item" href="#">Xét duyệt</a> <a
+												class="dropdown-item" href="#">Xóa</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+						</tfoot>
+					</table>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled"><a class="page-link" href="#"
+								tabindex="-1">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab-pane fade" id="my" role="tabpanel"
+		aria-labelledby="my-tab">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3">
+				<h6 class="m-0 font-weight-bold text-primary">Dự án của tôi</h6>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<!-- Topbar Search -->
+					<form class="d-none d-sm-inline-block form-inline navbar-search">
+						<div class="input-group">
+							<input type="text" class="form-control bg-light border-0 small"
+								placeholder="Tìm kiếm dự án..." aria-label="Search"
+								aria-describedby="basic-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-primary" type="button">
+									<i class="fas fa-search fa-sm"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<select class="otn border">
+						<option hidden>Chọn level</option>
+						<option value="1">Dự án thực tế</option>
+						<option value="2">Luyện tập kỹ năng</option>
+						<option value="3">Thực hành môn học</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn chuyên ngành</option>
+						<option value="1">Lập trình máy tính</option>
+						<option value="2">Thiết kế đồ hoạ</option>
+						<option value="3">Ứng dụng phần mềm</option>
+						<option value="3">Thiết kế website</option>
+						<option value="3">Thiết kế đồ hoạ</option>
+						<option value="3">Lập trình web</option>
+						<option value="3">Lập trình mobile</option>
+						<option value="3">Phát triển phần mềm</option>
+						<option value="3">Xử lý dữ liệu</option>
+						<option value="3">Tiếng anh</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn giảng viên</option>
+						<option value="1">NVA</option>
+						<option value="2">NVB</option>
+						<option value="3">NVC</option>
+					</select> <select class="otn border">
+						<option hidden>Chọn tình trạng</option>
+						<option value="1">Đang triển khai</option>
+						<option value="2">Đã kết thúc</option>
+						<option value="3">Three</option>
+					</select> <a class="btn btn-light btn-icon-split" href="#!projectCreate">
+						<span class="icon text-gray-600"> <i
+							class="fa fa-plus-circle" aria-hidden="true"></i>
+					</span> <span class="text">Tạo dự án</span>
+					</a>
+					<table class="table table-striped mt-4" id="dataTable" width="100%"
+						cellspacing="0">
+						<thead>
+							<tr>
+								<th>STT</th>
+								<th>DỰ ÁN</th>
+								<th>MÃ DỰ ÁN</th>
+								<th>TÊN XƯỞNG</th>
+								<th>GV HƯỚNG DẪN</th>
+								<th>HỌC KỲ</th>
+								<th>THÀNH VIÊN</th>
+								<th>TRẠNG THÁI</th>
+								<th>DEADLINE</th>
+								<th>TÙY CHỌN</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>
+									<div class="text-dark">Dự án kiểm tra UI và function góc
+										nhìn của Sinh viên</div>
+								</td>
+								<td>Lập trình mobile</td>
+								<td>MA01</td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn" type="button" id="dropdownMenuButton"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										</button>
+										Thêm giảng viên
+									</div>
+								</td>
+								<td>SPRING 2023</td>
+								<td>8</td>
+								<td><span class="badge badge-pill badge-info">Đang
+										triển khai</span></td>
+								<td><p>07:00:00 12/3/2023</p></td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn btn-circle btn-light" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-fw fa-ellipsis-v"></i>
+										</button>
+										<div class="dropdown-menu animated--fade-in"
+											aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#!projectEdit">Chỉnh sửa</a> <a
+												class="dropdown-item" href="#">Lưu</a> <a
+												class="dropdown-item" href="#">Xét duyệt</a> <a
+												class="dropdown-item" href="#">Xóa</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>
+									<div class="text-dark">Dự án kiểm tra UI và function góc
+										nhìn của Sinh viên</div>
+								</td>
+								<td>Lập trình mobile</td>
+								<td>MA01</td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn" type="button" id="dropdownMenuButton"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										</button>
+										Thêm giảng viên
+									</div>
+								</td>
+								<td>SPRING 2023</td>
+								<td>8</td>
+								<td><span class="badge badge-pill badge-info">Đang
+										triển khai</span></td>
+								<td><p>07:00:00 12/3/2023</p></td>
+								<td>
+									<div class="dropdown mb-4">
+										<button class="btn btn-circle btn-light" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-fw fa-ellipsis-v"></i>
+										</button>
+										<div class="dropdown-menu animated--fade-in"
+											aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#!projectEdit">Chỉnh sửa</a> <a
+												class="dropdown-item" href="#">Lưu</a> <a
+												class="dropdown-item" href="#">Xét duyệt</a> <a
+												class="dropdown-item" href="#">Xóa</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+						</tfoot>
+					</table>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled"><a class="page-link" href="#"
+								tabindex="-1">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

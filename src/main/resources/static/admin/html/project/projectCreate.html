@@ -1,0 +1,119 @@
+<style>
+textarea {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+label {
+color:black;
+font-weight:bold;
+    margin-top: 10px;
+}
+input {
+color:black;
+}
+</style>
+<div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">TẠO DỰ ÁN</h6>
+            </div>
+            <div class="card-body">
+               <div class="row">
+             <div class="col-sm-8">
+  <div class="form-row">
+    <div class="col">
+      <label for="realtime">Tên dự án</label>
+      <input type="text" class="form-control" id="realtime" placeholder="Nhập tên dự án">
+    </div>
+    <div class="col">
+      <label for="point">Mã dự án</label>
+      <input type="text" class="form-control" id="point" placeholder="Nhập mã dự án">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <label for="realtime">Effort</label>
+      <input type="number" class="form-control" id="realtime" placeholder="Nhập giờ">
+    </div>
+    <div class="col">
+      <label for="point">Poly Coin</label>
+      <input type="number" class="form-control" id="point" placeholder="Nhập điểm">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <label for="level">Level</label>
+      <select id="level" class="form-control">
+        <option hidden>Chọn level</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="exampleInputEmail1">Chuyên ngành</label>
+      <select id="inputState" class="form-control">
+        <option hidden>Chọn chuyên ngành</option>
+        <option>...</option>
+      </select>
+    </div>
+  </div>
+  <!-- Default switch -->
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitches">
+  <label class="custom-control-label" for="customSwitches">Công khai</label>
+  <small id="emailHelp" class="form-text text-muted">Cho phép sinh viên đăng ký</small>
+</div>
+  <hr>
+  <div class="form-row">
+    <div class="col">
+      <label for="exampleInputEmail1">Thời gian bắt đầu dự kiến</label>
+      <input class="form-control" name="time_start" type="datetime-local" placeholder="Title">
+    </div>
+    <div class="col">
+      <label for="exampleInputEmail1">Thời gian kết thúc</label>
+      <input class="form-control" name="time_end" type="datetime-local" placeholder="Title">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Mô tả dự án</label>
+    <textarea class="form-control" id="story" name="story" rows="5" cols="33" placeholder="Nhập mô tả dự án..."></textarea>
+  </div>
+  <div class="form-group">
+  <label for="formFile" class="form-label">Upload file</label>
+  <input class="form-control" type="file" id="formFile">
+</div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Đầu ra dự án</label>
+    <textarea class="form-control" id="story" name="story" rows="5" cols="33" placeholder="Nhập đầu ra dự án..."></textarea>
+  </div>
+  
+             </div>
+             <div class="col-sm-4">
+        <div class="form-group">
+    <label for="name">Học kỳ</label>
+    <input type="text" class="form-control" id="name" placeholder="Nhập học kỳ">
+<!--     <small id="emailHelp" class="form-text text-muted">Bắt lỗi</small> -->
+  </div>     
+  <div class="form-group">
+    <label for="name">Giảng viên hướng dẫn</label>
+    <input type="text" class="form-control" id="name" placeholder="Chọn">
+<!--     <small id="emailHelp" class="form-text text-muted">Bắt lỗi</small> -->
+  </div>
+  <div class="form-group">
+    <label for="name">Sinh viên tham gia</label>
+    <input type="text" class="form-control" id="name" placeholder="...">
+<!--     <small id="emailHelp" class="form-text text-muted">Bắt lỗi</small> -->
+  </div>
+             </div>
+    </div> 
+       
+  <button type="submit" class="btn btn-primary">Đồng ý tạo</button>
+            </div>
+          </div>
